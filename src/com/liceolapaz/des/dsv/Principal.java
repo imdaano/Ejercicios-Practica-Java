@@ -237,6 +237,7 @@ public class Principal {
         // aunque le queden intentos).
 
 
+/*
         Scanner teclado = new Scanner(System.in);
         String contrasenha = "bingo";
 
@@ -261,9 +262,46 @@ public class Principal {
                 System.out.println("Intentalo de nuevo.");
             }
         }
+*/
 
 
+        //  Ejercicio 17:
 
+        // Crea una aplicación que nos pida un día de la semana y que nos diga si es un dia laboral o no.
+        // Usa un switch para ello.
+
+
+        Scanner teclado = new Scanner(System.in);
+        boolean acierto = false;
+
+        do {
+            System.out.println(" ");
+            System.out.println("Introduce un dia de la semana:");
+            String dia = teclado.next();
+
+            switch (dia) {
+
+
+                case "lunes":
+                case "martes":
+                case "miercoles":
+                case "jueves":
+                case "viernes":
+                    System.out.println("Es un día laboral");
+                    acierto=true;
+                    break;
+
+                case "sabado":
+                case "domingo":
+                    System.out.println("No es un día laboral");
+                    acierto=true;
+                    break;
+
+                default:
+                    System.out.println("Introduzca correctamente el nombre del día de la semana en minusculas");
+
+            }
+        } while (!acierto);
 
 
 
