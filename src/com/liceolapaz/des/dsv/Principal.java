@@ -2,6 +2,9 @@ package com.liceolapaz.des.dsv;
 import javax.swing.*;
 import java.util.Scanner;
 
+// LINK DE LA PAGINA DE PRACTICA
+// https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-basicos-java/
+
 public class Principal {
     public static void main(String[] args) {
 
@@ -210,9 +213,57 @@ public class Principal {
         // a pedir (do while), después muestra ese número por consola.
 
 
+/*
         System.out.println("Introduce un numero para comprobar si es entero o no: ");
+        Scanner teclado = new Scanner(System.in);
+        int numero;
+        do{
+            numero = teclado.nextInt();
+            if (numero <=0){
+                System.out.println("Error: Debes introducir un numero mayor que 0.");
+            } else {
+                System.out.println("El número: " + numero + " es entero.");
+            }
+
+        }while(numero<=0);
+*/
+
+
+        // Ejercicio 16:
+
+        // Escribe una aplicación con un String que contenga una contraseña cualquiera. Después se te pedirá que
+        // introduzcas la contraseña, con 3 intentos. Cuando aciertes ya no pedirá mas la contraseña y mostrara un
+        // mensaje diciendo «Enhorabuena». Piensa bien en la condición de salida (3 intentos y si acierta sale,
+        // aunque le queden intentos).
+
 
         Scanner teclado = new Scanner(System.in);
+        String contrasenha = "bingo";
+
+        final int INTENTOS=3;
+
+        //Esta variable booleana, nos controlara que en caso de que acierte la condicion cambie
+        boolean acierto=false;
+
+        String password;
+
+        for (int i=0;i<INTENTOS && !acierto;i++) {
+            System.out.println(" ");
+            System.out.println("Intenta adivinar la contraseña: ");
+            password = teclado.nextLine();
+
+            // comprobamos si coincide
+
+            if(password.equals(contrasenha)) {
+                System.out.println("Enhorabuena acertaste!!");
+                acierto=true;
+            } else {
+                System.out.println("Intentalo de nuevo.");
+            }
+        }
+
+
+
 
 
 
